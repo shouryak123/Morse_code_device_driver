@@ -37,7 +37,7 @@ static void write_to_file(const char *decoded_chars) {
     loff_t pos = 0;
     ssize_t ret;
 
-    f = filp_open("/home/prachi/Downloads/os_project_copy/morse_driver.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    f = filp_open("/home/shour/Downloads/os_project_copy/morse_driver.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
     if (IS_ERR(f)) {
         printk(KERN_ERR "Morse Driver: Failed to open file\n");
         return;
@@ -149,6 +149,6 @@ module_init(morse_driver_init);
 module_exit(morse_driver_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Prachi Raj");
+MODULE_AUTHOR("Shourya Kothari");
 MODULE_DESCRIPTION("Buffered Morse Code Decoder Driver");
 MODULE_VERSION("2.0");
